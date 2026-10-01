@@ -3,7 +3,7 @@
 <main class="contenido">
     <div class="w-100">
 
-        <h2 class="titulo-seccion">Horarios</h2>
+        <h2 class="titulo-seccion">Materias</h2>
 
         <div class="table-responsive">
             <table class="table table-dark table-hover align-middle">
