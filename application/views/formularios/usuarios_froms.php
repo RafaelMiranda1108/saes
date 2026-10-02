@@ -1,214 +1,121 @@
 <?php $this->load->view('partials/hero'); ?>
 
-<main class="container">
+<main class="form-container">
 
     <div class="form-card">
 
+        <h1 class="form-title text-center">
+            <i class="bi bi-person-plus"></i>
+            Registro de Usuarios
+        </h1>
+
+        <p class="form-subtitle text-center">
+            Registro de información del usuario del sistema SAES.
+        </p>
+
         <form
-            action="<?= base_url('usuarios/guardar'); ?>"
+            action="<?= base_url('index.php/usuarios_froms/guardar'); ?>"
             method="POST"
         >
 
-            <!-- DATOS DEL USUARIO -->
-            <div class="section-title">
-                <i class="bi bi-person-circle"></i>
-                Datos del usuario
-            </div>
+            <!-- ID USUARIO -->
+            <div class="mb-3">
 
-            <div class="row g-3">
+                <label for="id_usuario" class="form-label">
+                    ID Usuario
+                </label>
 
-                <!-- NÚMERO DE CONTROL -->
-                <div class="col-md-6">
+                <div class="input-group">
 
-                    <label
-                        for="numero_control"
-                        class="form-label"
+                    <span class="input-group-text">
+                        <i class="bi bi-person-badge"></i>
+                    </span>
+
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="id_usuario"
+                        name="id_usuario"
+                        placeholder="ID del usuario"
+                        required
                     >
-                        Número de control
-                    </label>
-
-                    <div class="input-group">
-
-                        <span class="input-group-text">
-                            <i class="bi bi-card-text"></i>
-                        </span>
-
-                        <input
-                            type="text"
-                            class="form-control"
-                            id="numero_control"
-                            name="numero_control"
-                            maxlength="15"
-                            placeholder="Número de control"
-                            required
-                        >
-
-                    </div>
-
-                </div>
-
-
-                <!-- NOMBRES -->
-                <div class="col-md-6">
-
-                    <label
-                        for="nombres_usu"
-                        class="form-label"
-                    >
-                        Nombre(s)
-                    </label>
-
-                    <div class="input-group">
-
-                        <span class="input-group-text">
-                            <i class="bi bi-person"></i>
-                        </span>
-
-                        <input
-                            type="text"
-                            class="form-control"
-                            id="nombres_usu"
-                            name="nombres_usu"
-                            placeholder="Nombre(s)"
-                            required
-                        >
-
-                    </div>
-
-                </div>
-
-
-                <!-- APELLIDO PATERNO -->
-                <div class="col-md-6">
-
-                    <label
-                        for="apellido_paterno"
-                        class="form-label"
-                    >
-                        Apellido paterno
-                    </label>
-
-                    <div class="input-group">
-
-                        <span class="input-group-text">
-                            <i class="bi bi-person"></i>
-                        </span>
-
-                        <input
-                            type="text"
-                            class="form-control"
-                            id="apellido_paterno"
-                            name="apellido_paterno"
-                            placeholder="Apellido paterno"
-                            required
-                        >
-
-                    </div>
-
-                </div>
-
-
-                <!-- APELLIDO MATERNO -->
-                <div class="col-md-6">
-
-                    <label
-                        for="apellido_materno"
-                        class="form-label"
-                    >
-                        Apellido materno
-                    </label>
-
-                    <div class="input-group">
-
-                        <span class="input-group-text">
-                            <i class="bi bi-person"></i>
-                        </span>
-
-                        <input
-                            type="text"
-                            class="form-control"
-                            id="apellido_materno"
-                            name="apellido_materno"
-                            placeholder="Apellido materno"
-                            required
-                        >
-
-                    </div>
 
                 </div>
 
             </div>
 
 
-            <!-- INFORMACIÓN DE CONTACTO -->
-            <div class="section-title mt-5">
+            <!-- CONTRASEÑA -->
+            <div class="mb-3">
 
-                <i class="bi bi-envelope"></i>
+                <label for="contraseña_usua" class="form-label">
+                    Contraseña
+                </label>
 
-                Información de contacto
+                <div class="input-group">
 
-            </div>
+                    <span class="input-group-text">
+                        <i class="bi bi-lock"></i>
+                    </span>
 
-
-            <div class="row g-3">
-
-                <!-- CORREO -->
-                <div class="col-12">
-
-                    <label
-                        for="correo"
-                        class="form-label"
+                    <input
+                        type="password"
+                        class="form-control"
+                        id="contraseña_usua"
+                        name="contraseña_usua"
+                        placeholder="Contraseña"
+                        required
                     >
-                        Correo electrónico
-                    </label>
-
-                    <div class="input-group">
-
-                        <span class="input-group-text">
-                            <i class="bi bi-envelope"></i>
-                        </span>
-
-                        <input
-                            type="email"
-                            class="form-control"
-                            id="correo"
-                            name="correo"
-                            placeholder="ejemplo@correo.com"
-                            required
-                        >
-
-                    </div>
 
                 </div>
 
             </div>
 
 
-            <!-- ROL -->
-            <div class="section-title mt-5">
+            <!-- DESCRIPCIÓN -->
+            <div class="mb-3">
 
-                <i class="bi bi-shield-lock"></i>
+                <label for="descricpion_usua" class="form-label">
+                    Descripción
+                </label>
 
-                Rol del usuario
+                <div class="input-group">
+
+                    <span class="input-group-text">
+                        <i class="bi bi-card-text"></i>
+                    </span>
+
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="descricpion_usua"
+                        name="descricpion_usua"
+                        placeholder="Descripción del usuario"
+                        required
+                    >
+
+                </div>
 
             </div>
 
 
-            <div class="row g-3">
+            <!-- ESTATUS -->
+            <div class="mb-3">
 
-                <div class="col-md-6">
+                <label for="estatus_usua" class="form-label">
+                    Estatus
+                </label>
 
-                    <label
-                        for="rol"
-                        class="form-label"
-                    >
-                        Tipo de usuario
-                    </label>
+                <div class="input-group">
+
+                    <span class="input-group-text">
+                        <i class="bi bi-toggle-on"></i>
+                    </span>
 
                     <select
                         class="form-select"
-                        id="rol"
-                        name="rol"
+                        id="estatus_usua"
+                        name="estatus_usua"
                         required
                     >
 
@@ -217,23 +124,15 @@
                             selected
                             disabled
                         >
-                            Selecciona un rol
+                            Selecciona el estatus
                         </option>
 
-                        <option value="Alumno">
-                            Alumno
+                        <option value="Activo">
+                            Activo
                         </option>
 
-                        <option value="Docente">
-                            Docente
-                        </option>
-
-                        <option value="Admin">
-                            Administrador
-                        </option>
-
-                        <option value="Cocinero">
-                            Cocinero
+                        <option value="Inactivo">
+                            Inactivo
                         </option>
 
                     </select>
@@ -243,37 +142,35 @@
             </div>
 
 
-            <!-- INFORMACIÓN -->
-            <div class="info-box">
+            <!-- ESTADO -->
+            <div class="status-box">
 
-                <i class="bi bi-info-circle"></i>
+                <span class="status-dot"></span>
 
-                El usuario será registrado en el sistema SAES
-                con el rol seleccionado.
+                <span class="status-text">
+                    Listo para registrar usuario
+                </span>
 
             </div>
 
 
             <!-- BOTONES -->
-            <div class="d-flex justify-content-end gap-2 mt-4">
+            <div class="d-flex flex-wrap gap-2 justify-content-end mt-4">
 
-                <!-- LIMPIAR -->
                 <button
                     type="reset"
-                    class="btn btn-secondary px-4"
+                    class="btn-outline-darkmode"
                 >
                     <i class="bi bi-arrow-counterclockwise"></i>
                     Limpiar
                 </button>
 
-
-                <!-- GUARDAR -->
                 <button
                     type="submit"
-                    class="btn btn-primary px-4"
+                    class="btn-purple"
                 >
                     <i class="bi bi-person-plus"></i>
-                    Guardar usuario
+                    Registrar usuario
                 </button>
 
             </div>

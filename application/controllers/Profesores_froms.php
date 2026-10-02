@@ -1,25 +1,58 @@
 <?php
+
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Profesores_froms extends CI_Controller {
+class Profesores_froms extends CI_Controller
+{
+    public function __construct()
+    {
+        parent::__construct();
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/userguide3/general/urls.html
-	 */
-	public function index()
-	{
-		$this->load->view('formularios/profesores_froms');
-	}
+        $this->load->model('Profesores_model');
+    }
+
+    public function index()
+    {
+        $data['titulo'] = 'Profesores | SAES';
+        $data['contenido'] = 'formularios/profesores_froms';
+
+        $this->load->view('layouts/main', $data);
+    }
+
+    public function guardar()
+    {
+        $datos = array(
+            'nocontrol_prof' => $this->input->post('nocontrol_prof'),
+            'nombre_prof'    => $this->input->post('nombre_prof'),
+            'apellidop_prof' => $this->input->post('apellidop_prof'),
+            'apellidom_prof' => $this->input->post('apellidom_prof'),
+            'tel_prof'       => $this->input->post('tel_prof'),
+            'dom_prof'       => $this->input->post('dom_prof'),
+            'estatus_prof'   => $this->input->post('estatus_prof')
+        );
+
+        $this->Profesores_model->insertar_profesor($datos);
+
+        redirect('profesores_froms');
+    }
+
+    public function lista()
+    {
+        $data['profesores'] = $this->Profesores_model->obtener_profesores();
+
+        $data['titulo'] = 'Lista de profesores | SAES';
+        $data['contenido'] = 'tablas/profesores';
+
+        $this->load->view('layouts/main', $data);
+    }
+
+    public function ver($id_prof)
+    {
+        $data['profesor'] = $this->Profesores_model->obtener_profesor($id_prof);
+
+        $data['titulo'] = 'Profesor | SAES';
+        $data['contenido'] = 'tablas/profesor';
+
+        $this->load->view('layouts/main', $data);
+    }
 }

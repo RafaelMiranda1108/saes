@@ -1,4 +1,5 @@
 <?php
+
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Calificaciones_model extends CI_Model
@@ -8,7 +9,6 @@ class Calificaciones_model extends CI_Model
         parent::__construct();
     }
 
-    // Obtener todas las calificaciones
     public function obtener_calificaciones()
     {
         $query = $this->db->get('calificaciones');

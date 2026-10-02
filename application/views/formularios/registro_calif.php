@@ -13,8 +13,10 @@
             Registro de la calificación correspondiente al alumno, profesor, materia y grupo.
         </p>
 
-
-        <form>
+        <form
+            action="<?= base_url('index.php/registro_calif/guardar'); ?>"
+            method="POST"
+        >
 
             <!-- PROFESOR -->
             <div class="mb-3">

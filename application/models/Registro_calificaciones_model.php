@@ -1,4 +1,5 @@
 <?php
+
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Registro_calificaciones_model extends CI_Model
@@ -8,7 +9,7 @@ class Registro_calificaciones_model extends CI_Model
         parent::__construct();
     }
 
-    // Registrar una nueva calificación
+    // Registrar una calificación
     public function insertar_calificacion($datos)
     {
         return $this->db->insert('calificaciones', $datos);

@@ -12,7 +12,10 @@
             Registro de información personal y laboral del profesor.
         </p>
 
-        <form>
+        <form
+            action="<?= base_url('index.php/profesores_froms/guardar'); ?>"
+            method="POST"
+        >
 
             <!-- DATOS DEL PROFESOR -->
             <div class="section-title">
