@@ -1,25 +1,35 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Alumnos_froms extends CI_Controller {
+class Alumnos extends CI_Controller
+{
+    public function index()
+    {
+        $this->load->view('formulario_alumnos');
+    }
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/userguide3/general/urls.html
-	 */
-	public function index()
-	{
-		$this->load->view('formularios/alumnos_froms');
-	}
+    public function guardar()
+    {
+        $datos = array(
+            'nombre_al'    => $this->input->post('nombre_al'),
+            'apaterno_al'  => $this->input->post('apaterno_al'),
+            'amaterno_al'  => $this->input->post('amaterno_al'),
+            'matricula_al' => $this->input->post('matricula_al'),
+            'tel_al'       => $this->input->post('tel_al'),
+            'dom_al'       => $this->input->post('dom_al'),
+            'estatus_al'   => $this->input->post('estatus_al')
+        );
+
+        $this->db->insert('alumnos', $datos);
+
+        redirect('alumnos');
+    }
+
+    public function lista()
+    {
+        $this->load->model('Alumno_model');
+
+        $datos['alumnos'] = $this->Alumno_model->obtener_alumnos();
+
+        $this->load->view('lista_alumnos', $datos);
+    }
 }
