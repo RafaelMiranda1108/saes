@@ -1,10 +1,22 @@
 <?php
 
-class Alumnos extends CI_Controller
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+class Alumnos_froms extends CI_Controller
 {
+    public function __construct()
+    {
+        parent::__construct();
+
+        $this->load->model('Alumno_model');
+    }
+
     public function index()
     {
-        $this->load->view('formulario_alumnos');
+        $data['titulo'] = 'Alumnos | SAES';
+        $data['contenido'] = 'formularios/alumnos_froms';
+
+        $this->load->view('layouts/main', $data);
     }
 
     public function guardar()
@@ -19,17 +31,8 @@ class Alumnos extends CI_Controller
             'estatus_al'   => $this->input->post('estatus_al')
         );
 
-        $this->db->insert('alumnos', $datos);
+        $this->Alumno_model->insertar_alumno($datos);
 
-        redirect('alumnos');
-    }
-
-    public function lista()
-    {
-        $this->load->model('Alumno_model');
-
-        $datos['alumnos'] = $this->Alumno_model->obtener_alumnos();
-
-        $this->load->view('lista_alumnos', $datos);
+        redirect('alumnos_froms');
     }
 }
