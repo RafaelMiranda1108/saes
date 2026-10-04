@@ -1,1 +1,3 @@
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<?php
+// SAES no requiere JavaScript propio ni el bundle JS de Bootstrap.
+// Los menús desplegables funcionan mediante CSS y HTML.
