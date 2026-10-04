@@ -24,7 +24,7 @@
                 de manera sencilla desde un solo lugar.
             </p>
 
-            <a href="#" class="btn-saes">
+            <a href="<?= site_url('Usuarios_froms'); ?>" class="btn-saes">
                 <i class="bi bi-arrow-right-circle"></i>
                 Comenzar
             </a>
