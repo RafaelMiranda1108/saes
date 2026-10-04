@@ -25,14 +25,24 @@
                 <span>Profesores</span>
             </a>
 
-            <a href="<?= base_url('materias'); ?>" class="<?= ($this->uri->segment(1) == 'materias') ? 'active' : '' ?>">
+            <a href="<?= base_url('Materias'); ?>" class="<?= ($this->uri->segment(1) == 'materias') ? 'active' : '' ?>">
                 <i class="bi bi-book"></i>
                 <span>Materias</span>
             </a>
 
-            <a href="<?= base_url('registro_calif'); ?>" class="<?= ($this->uri->segment(1) == 'registro_calif') ? 'active' : '' ?>">
+            <a href="<?= base_url('Registro_calif'); ?>" class="<?= ($this->uri->segment(1) == 'registro_calif') ? 'active' : '' ?>">
                 <i class="bi bi-journal-check"></i>
                 <span>Calificaciones</span>
+            </a>
+
+            <a href="<?= base_url('Usuarios_froms'); ?>" class="<?= ($this->uri->segment(1) == 'Usuarios_froms') ? 'active' : '' ?>">
+                <i class="bi bi-person-gear"></i>
+                <span>Usuarios</span>
+            </a>
+
+            <a href="<?= base_url('Tabla_horarios'); ?>" class="<?= ($this->uri->segment(1) == 'Tabla_horarios') ? 'active' : '' ?>">
+                <i class="bi bi-calendar3"></i>
+                <span>Horarios</span>
             </a>
 
         </div>
