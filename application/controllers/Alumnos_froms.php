@@ -19,6 +19,15 @@ class Alumnos_froms extends CI_Controller
         $this->load->view('layouts/main', $data);
     }
 
+    public function lista()
+    {
+        $data['alumnos'] = $this->Alumno_model->obtener_alumnos();
+        $data['titulo'] = 'Lista de alumnos | SAES';
+        $data['contenido'] = 'tablas/alumnos';
+
+        $this->load->view('layouts/main', $data);
+    }
+
     public function guardar()
     {
         $datos = array(
