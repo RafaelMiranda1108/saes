@@ -1,8 +1,8 @@
 <?php $this->load->view('partials/hero'); ?>
 
-<main class="container">
+<main class="table-container">
 
-    <section class="form-card">
+    <section class="table-card">
 
         <h1 class="form-title text-center">
             <i class="bi bi-list-check"></i>
@@ -15,7 +15,7 @@
 
         <div class="table-responsive">
 
-            <table class="table table-bordered">
+            <table class="table table-saes table-hover">
 
                 <thead>
                     <tr>
