@@ -10,6 +10,7 @@ class Usuarios_froms extends CI_Controller
 
         $this->load->model('Usuarios_model');
         $this->load->library('session');
+        $this->load->library('session');
     }
 
     public function login()
