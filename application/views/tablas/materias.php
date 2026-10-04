@@ -1,12 +1,12 @@
 <?php $this->load->view('partials/hero'); ?>
 
-<main class="contenido">
-    <div class="w-100">
+<main class="table-container">
+    <div class="table-card">
 
         <h2 class="titulo-seccion">Materias</h2>
 
         <div class="table-responsive">
-            <table class="table table-dark table-hover align-middle">
+            <table class="table table-saes table-hover align-middle">
                 <thead>
                     <tr>
                         <th scope="col">#</th>
