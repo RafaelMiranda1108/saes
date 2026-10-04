@@ -11,6 +11,41 @@ class Usuarios_froms extends CI_Controller
         $this->load->model('Usuarios_model');
     }
 
+    public function login()
+    {
+        $data['titulo'] = 'Login | SAES';
+        $data['contenido'] = 'formularios/login';
+        $data['error'] = $this->session->flashdata('login_error');
+
+        $this->load->view('layouts/main', $data);
+    }
+
+    public function entrar()
+    {
+        $id_usuario = $this->input->post('id_usuario');
+        $contraseña = $this->input->post('contraseña_usua');
+
+        $usuario = $this->Usuarios_model->validar_login($id_usuario, $contraseña);
+
+        if ($usuario) {
+            $this->load->library('session');
+            $this->session->set_userdata('usuario_id', $usuario->id_usuario);
+            $this->session->set_userdata('usuario_descripcion', $usuario->descricpion_usua);
+            redirect();
+        }
+
+        $this->load->library('session');
+        $this->session->set_flashdata('login_error', 'ID de usuario o contraseña incorrectos.');
+        redirect('Usuarios_froms/login');
+    }
+
+    public function salir()
+    {
+        $this->load->library('session');
+        $this->session->sess_destroy();
+        redirect();
+    }
+
     public function index()
     {
         $data['titulo'] = 'Usuarios | SAES';
