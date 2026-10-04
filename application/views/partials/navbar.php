@@ -1,7 +1,7 @@
 <nav class="navbar-saes">
     <div class="navbar-container">
 
-        <a href="<?= base_url(); ?>" class="brand">
+        <a href="<?= site_url(); ?>" class="brand">
             <span class="terminal-dot"></span>
             SAES
         </a>
@@ -10,7 +10,7 @@
 
         <div class="nav-links">
 
-            <a href="<?= base_url(); ?>" class="<?= ($this->uri->segment(1) == '') ? 'active' : '' ?>">
+            <a href="<?= site_url(); ?>" class="<?= ($this->uri->segment(1) == '') ? 'active' : '' ?>">
                 <i class="bi bi-house"></i>
                 <span>Inicio</span>
             </a>
@@ -22,12 +22,12 @@
                 </a>
                 <ul class="dropdown-menu">
                     <li>
-                        <a class="dropdown-item" href="<?= base_url('Alumnos_froms'); ?>">
+                        <a class="dropdown-item" href="<?= site_url('Alumnos_froms'); ?>">
                             <i class="bi bi-people"></i> Alumnos
                         </a>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="<?= base_url('Profesores_froms'); ?>">
+                        <a class="dropdown-item" href="<?= site_url('Profesores_froms'); ?>">
                             <i class="bi bi-person-badge"></i> Profesores
                         </a>
                     </li>
@@ -41,7 +41,7 @@
                 </a>
                 <ul class="dropdown-menu">
                     <li>
-                        <a class="dropdown-item" href="<?= base_url('Usuarios_froms/login'); ?>">
+                        <a class="dropdown-item" href="<?= site_url('Usuarios_froms/login'); ?>">
                             <i class="bi bi-box-arrow-in-right"></i> Login
                         </a>
                     </li>
@@ -55,38 +55,38 @@
                 </a>
                 <ul class="dropdown-menu">
                     <li>
-                        <a class="dropdown-item" href="<?= base_url('Materias'); ?>">
+                        <a class="dropdown-item" href="<?= site_url('Materias'); ?>">
                             <i class="bi bi-book"></i> Materias
                         </a>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="<?= base_url('Registro_calif'); ?>">
+                        <a class="dropdown-item" href="<?= site_url('Registro_calif'); ?>">
                             <i class="bi bi-journal-check"></i> Registrar calificación
                         </a>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="<?= base_url('Lista_calif'); ?>">
+                        <a class="dropdown-item" href="<?= site_url('Lista_calif'); ?>">
                             <i class="bi bi-list-check"></i> Lista de calificaciones
                         </a>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="<?= base_url('Tabla_horarios'); ?>">
+                        <a class="dropdown-item" href="<?= site_url('Tabla_horarios'); ?>">
                             <i class="bi bi-calendar3"></i> Horarios
                         </a>
                     </li>
                     <li><hr class="dropdown-divider"></li>
                     <li>
-                        <a class="dropdown-item" href="<?= base_url('Alumnos_froms/lista'); ?>">
+                        <a class="dropdown-item" href="<?= site_url('Alumnos_froms/lista'); ?>">
                             <i class="bi bi-table"></i> Lista de alumnos
                         </a>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="<?= base_url('Profesores_froms/lista'); ?>">
+                        <a class="dropdown-item" href="<?= site_url('Profesores_froms/lista'); ?>">
                             <i class="bi bi-table"></i> Lista de profesores
                         </a>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="<?= base_url('Usuarios_froms/lista'); ?>">
+                        <a class="dropdown-item" href="<?= site_url('Usuarios_froms/lista'); ?>">
                             <i class="bi bi-table"></i> Lista de usuarios
                         </a>
                     </li>
