@@ -49,7 +49,7 @@
             </div>
 
             <div class="dropdown nav-dropdown">
-                <a href="#" class="dropdown-toggle nav-dropdown-toggle <?= in_array($this->uri->segment(1), array('Materias', 'Registro_calif', 'Tabla_horarios')) ? 'active' : '' ?>">
+                <a href="#" class="dropdown-toggle nav-dropdown-toggle <?= in_array($this->uri->segment(1), array('Materias', 'Registro_calif', 'Lista_calif', 'Tabla_horarios')) ? 'active' : '' ?>">
                     <i class="bi bi-grid"></i>
                     <span>Vistas</span>
                 </a>
@@ -62,6 +62,11 @@
                     <li>
                         <a class="dropdown-item" href="<?= base_url('Registro_calif'); ?>">
                             <i class="bi bi-journal-check"></i> Registrar calificación
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="<?= base_url('Lista_calif'); ?>">
+                            <i class="bi bi-list-check"></i> Lista de calificaciones
                         </a>
                     </li>
                     <li>
