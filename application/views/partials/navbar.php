@@ -15,35 +15,78 @@
                 <span>Inicio</span>
             </a>
 
-            <a href="<?= base_url('alumnos_froms'); ?>" class="<?= ($this->uri->segment(1) == 'alumnos_froms') ? 'active' : '' ?>">
-                <i class="bi bi-people"></i>
-                <span>Alumnos</span>
-            </a>
+            <div class="dropdown nav-dropdown">
+                <a href="#" class="dropdown-toggle nav-dropdown-toggle <?= in_array($this->uri->segment(1), array('Alumnos_froms', 'Profesores_froms')) ? 'active' : '' ?>">
+                    <i class="bi bi-ui-checks"></i>
+                    <span>Formularios</span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="dropdown-item" href="<?= base_url('Alumnos_froms'); ?>">
+                            <i class="bi bi-people"></i> Alumnos
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="<?= base_url('Profesores_froms'); ?>">
+                            <i class="bi bi-person-badge"></i> Profesores
+                        </a>
+                    </li>
+                </ul>
+            </div>
 
-            <a href="<?= base_url('profesores_froms'); ?>" class="<?= ($this->uri->segment(1) == 'profesores_froms') ? 'active' : '' ?>">
-                <i class="bi bi-person-badge"></i>
-                <span>Profesores</span>
-            </a>
+            <div class="dropdown nav-dropdown">
+                <a href="#" class="dropdown-toggle nav-dropdown-toggle <?= ($this->uri->segment(1) == 'Usuarios_froms') ? 'active' : '' ?>">
+                    <i class="bi bi-person-gear"></i>
+                    <span>Usuarios</span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="dropdown-item" href="<?= base_url('Usuarios_froms/login'); ?>">
+                            <i class="bi bi-box-arrow-in-right"></i> Login
+                        </a>
+                    </li>
+                </ul>
+            </div>
 
-            <a href="<?= base_url('Materias'); ?>" class="<?= ($this->uri->segment(1) == 'materias') ? 'active' : '' ?>">
-                <i class="bi bi-book"></i>
-                <span>Materias</span>
-            </a>
-
-            <a href="<?= base_url('Registro_calif'); ?>" class="<?= ($this->uri->segment(1) == 'registro_calif') ? 'active' : '' ?>">
-                <i class="bi bi-journal-check"></i>
-                <span>Calificaciones</span>
-            </a>
-
-            <a href="<?= base_url('Usuarios_froms'); ?>" class="<?= ($this->uri->segment(1) == 'Usuarios_froms') ? 'active' : '' ?>">
-                <i class="bi bi-person-gear"></i>
-                <span>Usuarios</span>
-            </a>
-
-            <a href="<?= base_url('Tabla_horarios'); ?>" class="<?= ($this->uri->segment(1) == 'Tabla_horarios') ? 'active' : '' ?>">
-                <i class="bi bi-calendar3"></i>
-                <span>Horarios</span>
-            </a>
+            <div class="dropdown nav-dropdown">
+                <a href="#" class="dropdown-toggle nav-dropdown-toggle <?= in_array($this->uri->segment(1), array('Materias', 'Registro_calif', 'Tabla_horarios')) ? 'active' : '' ?>">
+                    <i class="bi bi-grid"></i>
+                    <span>Vistas</span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="dropdown-item" href="<?= base_url('Materias'); ?>">
+                            <i class="bi bi-book"></i> Materias
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="<?= base_url('Registro_calif'); ?>">
+                            <i class="bi bi-journal-check"></i> Registrar calificación
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="<?= base_url('Tabla_horarios'); ?>">
+                            <i class="bi bi-calendar3"></i> Horarios
+                        </a>
+                    </li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li>
+                        <a class="dropdown-item" href="<?= base_url('Alumnos_froms/lista'); ?>">
+                            <i class="bi bi-table"></i> Lista de alumnos
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="<?= base_url('Profesores_froms/lista'); ?>">
+                            <i class="bi bi-table"></i> Lista de profesores
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="<?= base_url('Usuarios_froms/lista'); ?>">
+                            <i class="bi bi-table"></i> Lista de usuarios
+                        </a>
+                    </li>
+                </ul>
+            </div>
 
         </div>
 
