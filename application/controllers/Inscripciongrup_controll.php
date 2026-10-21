@@ -26,13 +26,13 @@ class Inscripciongrup_controll extends CI_Controller
             return;
         }
 
-        $id_grupo = $this->input->post('id_grupo', TRUE);
-        $id_alumno = $this->input->post('id_alumno', TRUE);
+        $id_grup = $this->input->post('id_grup', TRUE);
+        $id_alumn = $this->input->post('id_alumn', TRUE);
         $estatus = $this->input->post('estatus_insg', TRUE);
 
-        if ($id_grupo === NULL || $id_grupo === '' || !ctype_digit((string)$id_grupo) ||
-            (int)$id_grupo < 1 || $id_alumno === NULL || $id_alumno === '' ||
-            !ctype_digit((string)$id_alumno) || (int)$id_alumno < 1 ||
+        if ($id_grup === NULL || $id_grup === '' || !ctype_digit((string)$id_grup) ||
+            (int)$id_grup < 1 || $id_alumn === NULL || $id_alumn === '' ||
+            !ctype_digit((string)$id_alumn) || (int)$id_alumn < 1 ||
             !in_array($estatus, array('Activa', 'Inactiva'), TRUE)) {
             $this->session->set_flashdata('error', 'Verifica los IDs de grupo y alumno, y selecciona un estatus válido.');
             redirect('Inscripciongrup_controll');
@@ -40,8 +40,8 @@ class Inscripciongrup_controll extends CI_Controller
         }
 
         $datos = array(
-            'id_grupo' => (int)$id_grupo,
-            'id_alumno' => (int)$id_alumno,
+            'id_grup' => (int)$id_grup,
+            'id_alumn' => (int)$id_alumn,
             'estatus_insg' => $estatus
         );
 
