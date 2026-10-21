@@ -34,9 +34,8 @@
             Registrar captura
         </h5>
 
-        <form action="<?= site_url('Captcal_controll/guardar'); ?>
+        <form action="<?= site_url('Captcal_controll/guardar'); ?>" method="post">
             <input type="hidden" name="<?= $this->security->get_csrf_token_name(); ?>" value="<?= $this->security->get_csrf_hash(); ?>">" method="post">
-              method="post">
 
             <div class="mb-3">
                 <label for="id_alumn" class="form-label">
