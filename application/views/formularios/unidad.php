@@ -16,7 +16,7 @@
         <?php endif; ?>
 
         <div class="section-title"><i class="bi bi-journal-text"></i> Información de la unidad</div>
-        <form action="<?= site_url('unidad_controll/guardar'); ?>" method="post">
+        <form action="<?= site_url('Unidad_controll/guardar'); ?>" method="post">
             <input type="hidden" name="<?= $this->security->get_csrf_token_name(); ?>" value="<?= $this->security->get_csrf_hash(); ?>">
             <div class="mb-3">
                 <label for="descripcion_uni" class="form-label">Descripción de la unidad</label>
@@ -25,7 +25,7 @@
             </div>
             <div class="d-flex gap-2 flex-wrap">
                 <button type="submit" class="btn btn-purple"><i class="bi bi-save"></i> Guardar unidad</button>
-                <a href="<?= site_url('unidad_controll/lista'); ?>" class="btn btn-outline-darkmode">
+                <a href="<?= site_url('Unidad_controll/lista'); ?>" class="btn btn-outline-darkmode">
                     <i class="bi bi-list-ul"></i> Ver unidades
                 </a>
             </div>
