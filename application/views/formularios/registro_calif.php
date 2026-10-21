@@ -14,7 +14,7 @@
         </p>
 
         <form
-            action="<?= base_url('index.php/registro_calif/guardar'); ?>"
+            action="<?= base_url('index.php/registro_calif_controll/guardar'); ?>"
             method="POST"
         >
 
