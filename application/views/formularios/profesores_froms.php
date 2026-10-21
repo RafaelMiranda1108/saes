@@ -12,8 +12,7 @@
             Registro de información personal y laboral del profesor.
         </p>
 
-        <form
-            action="<?= site_url('Profesores_froms/guardar'); ?>
+        <form action="<?= site_url('Profesores_froms/guardar'); ?>" method="POST">
             <input type="hidden" name="<?= $this->security->get_csrf_token_name(); ?>" value="<?= $this->security->get_csrf_hash(); ?>">"
             method="POST"
         >
