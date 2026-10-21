@@ -13,7 +13,8 @@
         </p>
 
         <form
-            href="<?= site_url('unidad_controll/lista'); ?>"
+            href="<?= site_url('unidad_controll/lista'); ?>
+            <input type="hidden" name="<?= $this->security->get_csrf_token_name(); ?>" value="<?= $this->security->get_csrf_hash(); ?>">"
             method="POST"
         >
 
