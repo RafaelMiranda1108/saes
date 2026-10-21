@@ -35,9 +35,8 @@
             Registrar grupo
         </h5>
 
-        <form action="<?= site_url('Grupos_controll/guardar'); ?>
+        <form action="<?= site_url('Grupos_controll/guardar'); ?>" method="post">
             <input type="hidden" name="<?= $this->security->get_csrf_token_name(); ?>" value="<?= $this->security->get_csrf_hash(); ?>">" method="post">
-              method="post">
 
             <div class="mb-3">
                 <label for="descripcion_grup" class="form-label">
