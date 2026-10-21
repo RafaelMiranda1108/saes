@@ -28,19 +28,19 @@ class Unidad_controll extends CI_Controller
         $descripcion = trim((string) $this->input->post('descripcion_uni', TRUE));
         if ($descripcion === '') {
             $this->session->set_flashdata('unidad_mensaje', 'La descripción de la unidad es obligatoria.');
-            redirect('unidad_controll');
+            redirect('Unidad_controll');
             return;
         }
 
         if (!$this->Unidad_model->guardar_unidad(array('descripcion_uni' => $descripcion))) {
             log_message('error', 'No se pudo registrar una unidad académica.');
             $this->session->set_flashdata('unidad_mensaje', 'No se pudo registrar la unidad.');
-            redirect('unidad_controll');
+            redirect('Unidad_controll');
             return;
         }
 
         $this->session->set_flashdata('unidad_mensaje', 'Unidad registrada correctamente.');
-        redirect('unidad_controll/lista');
+        redirect('Unidad_controll/lista');
     }
 
     public function lista()
@@ -78,7 +78,7 @@ class Unidad_controll extends CI_Controller
         }
 
         if ($this->Unidad_model->actualizar_unidad($id_unidad, array('descripcion_uni' => $descripcion))) {
-            redirect('unidad_controll/lista');
+            redirect('Unidad_controll/lista');
             return;
         }
 
@@ -93,7 +93,7 @@ class Unidad_controll extends CI_Controller
         }
 
         if ($this->Unidad_model->eliminar_unidad($id_unidad)) {
-            redirect('unidad_controll/lista');
+            redirect('Unidad_controll/lista');
             return;
         }
 
