@@ -20,8 +20,7 @@
             <div class="alert alert-success" role="status"><?= html_escape($this->session->flashdata('usuario_ok')) ?></div>
         <?php endif; ?>
 
-        <form
-            action="<?= site_url('Usuarios_froms/guardar'); ?>
+        <form action="<?= site_url('Usuarios_froms/guardar'); ?>" method="POST">
             <input type="hidden" name="<?= $this->security->get_csrf_token_name(); ?>" value="<?= $this->security->get_csrf_hash(); ?>">"
             method="POST"
         >
