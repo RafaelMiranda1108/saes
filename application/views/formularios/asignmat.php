@@ -36,8 +36,7 @@
         </h5>
 
         <form action="<?= site_url('asignmat_controll/guardar'); ?>" method="post">
-            <input type="hidden" name="<?= $this->security->get_csrf_token_name(); ?>" value="<?= $this->security->get_csrf_hash(); ?>">"
-              method="post">
+            <input type="hidden" name="<?= $this->security->get_csrf_token_name(); ?>" value="<?= $this->security->get_csrf_hash(); ?>">
 
             <div class="mb-3">
                 <label for="id_mat" class="form-label">
