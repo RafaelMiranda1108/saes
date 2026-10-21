@@ -73,6 +73,16 @@ class Usuarios_model extends CI_Model
             return $usuario;
         }
 
+        // Compatibilidad temporal: convierte contraseñas antiguas en texto plano a hash
+        // solo después de comprobar que la contraseña ingresada coincide exactamente.
+        if (hash_equals((string) $usuario->contraseña_usua, $contraseña)) {
+            $nuevo_hash = password_hash($contraseña, PASSWORD_DEFAULT);
+            $this->db->where('id_usuario', $usuario->id_usuario);
+            $this->db->update('usuarios', array('contraseña_usua' => $nuevo_hash));
+            $usuario->contraseña_usua = $nuevo_hash;
+            return $usuario;
+        }
+
         return FALSE;
     }
 }
