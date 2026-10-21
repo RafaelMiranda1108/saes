@@ -6,7 +6,7 @@ class Welcome extends CI_Controller
     public function index()
     {
         $data['titulo'] = 'SAES | Sistema de Administración Escolar';
-        $data['contenido'] = 'welcome_message';
+        $data['contenido'] = 'inicio';
 
         $this->load->view('layouts/main', $data);
     }
