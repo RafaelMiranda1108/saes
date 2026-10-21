@@ -17,8 +17,7 @@
             <div class="alert alert-info" role="status"><?= html_escape($mensaje) ?></div>
         <?php endif; ?>
 
-        <form
-            action="<?= site_url('Registro_calif/guardar'); ?>
+        <form action="<?= site_url('Registro_calif/guardar'); ?>" method="POST">
             <input type="hidden" name="<?= $this->security->get_csrf_token_name(); ?>" value="<?= $this->security->get_csrf_hash(); ?>">"
             method="POST"
         >
