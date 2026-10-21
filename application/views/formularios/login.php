@@ -20,7 +20,7 @@
             </div>
         <?php endif; ?>
 
-        <form action="<?= site_url('Usuarios_froms/entrar'); ?>
+        <form action="<?= site_url('Usuarios_froms/entrar'); ?>" method="POST">
             <input type="hidden" name="<?= $this->security->get_csrf_token_name(); ?>" value="<?= $this->security->get_csrf_hash(); ?>">" method="POST">
 
             <div class="mb-3">
