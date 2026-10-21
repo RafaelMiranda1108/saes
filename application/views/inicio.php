@@ -80,8 +80,8 @@
                         <h3 class="h5 mb-0">Unidades</h3>
                     </div>
                     <p>Registra y consulta unidades académicas.</p>
-                    <a class="btn-purple text-decoration-none" href="<?= site_url('unidad_controll'); ?>">Abrir unidades</a>
-                    <a class="d-block mt-3" href="<?= site_url('unidad_controll/lista'); ?>">Ver lista de unidades</a>
+                    <a class="btn-purple text-decoration-none" href="<?= site_url('Unidad_controll'); ?>">Abrir unidades</a>
+                    <a class="d-block mt-3" href="<?= site_url('Unidad_controll/lista'); ?>">Ver lista de unidades</a>
                 </article>
             </div>
 
