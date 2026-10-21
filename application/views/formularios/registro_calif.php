@@ -18,9 +18,7 @@
         <?php endif; ?>
 
         <form action="<?= site_url('Registro_calif/guardar'); ?>" method="POST">
-            <input type="hidden" name="<?= $this->security->get_csrf_token_name(); ?>" value="<?= $this->security->get_csrf_hash(); ?>">"
-            method="POST"
-        >
+            <input type="hidden" name="<?= $this->security->get_csrf_token_name(); ?>" value="<?= $this->security->get_csrf_hash(); ?>">
 
             <!-- PROFESOR -->
             <div class="mb-3">
