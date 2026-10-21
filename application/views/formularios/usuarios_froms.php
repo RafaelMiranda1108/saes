@@ -21,9 +21,7 @@
         <?php endif; ?>
 
         <form action="<?= site_url('Usuarios_froms/guardar'); ?>" method="POST">
-            <input type="hidden" name="<?= $this->security->get_csrf_token_name(); ?>" value="<?= $this->security->get_csrf_hash(); ?>">"
-            method="POST"
-        >
+            <input type="hidden" name="<?= $this->security->get_csrf_token_name(); ?>" value="<?= $this->security->get_csrf_hash(); ?>">
 
             <!-- ID USUARIO -->
             <div class="mb-3">
