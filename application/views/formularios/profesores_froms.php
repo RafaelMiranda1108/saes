@@ -13,7 +13,8 @@
         </p>
 
         <form
-            action="<?= base_url('index.php/profesores_froms/guardar'); ?>"
+            action="<?= site_url('Profesores_froms/guardar'); ?>
+            <input type="hidden" name="<?= $this->security->get_csrf_token_name(); ?>" value="<?= $this->security->get_csrf_hash(); ?>">"
             method="POST"
         >
 
