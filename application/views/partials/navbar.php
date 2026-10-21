@@ -24,7 +24,7 @@
 
                 <!-- Menú de Registro -->
                 <div class="dropdown nav-dropdown">
-                    <a href="#" class="dropdown-toggle nav-dropdown-toggle <?= in_array($this->uri->segment(1), array('Alumnos_froms', 'Profesores_froms', 'Materias', 'unidad_controll', 'Inscripciongrup_controll')) ? 'active' : '' ?>" data-bs-toggle="dropdown">
+                    <a href="#" class="dropdown-toggle nav-dropdown-toggle <?= in_array($this->uri->segment(1), array('Alumnos_froms', 'Profesores_froms', 'Materias', 'Unidad_controll', 'Inscripciongrup_controll')) ? 'active' : '' ?>" data-bs-toggle="dropdown">
                         <i class="bi bi-ui-checks"></i>
                         <span>Registro</span>
                     </a>
@@ -40,7 +40,12 @@
                             </a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="<?= site_url('unidad_controll'); ?>">
+                            <a class="dropdown-item" href="<?= site_url('Materias'); ?>">
+                                <i class="bi bi-book"></i> Materias
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="<?= site_url('Unidad_controll'); ?>">
                                 <i class="bi bi-diagram-3"></i> Unidades
                             </a>
                         </li>
@@ -74,11 +79,6 @@
                         <span>Reportes</span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li>
-                            <a class="dropdown-item" href="<?= site_url('Materias'); ?>">
-                                <i class="bi bi-book"></i> Materias
-                            </a>
-                        </li>
                         <li>
                             <a class="dropdown-item" href="<?= site_url('Registro_calif'); ?>">
                                 <i class="bi bi-journal-check"></i> Registrar calificación
