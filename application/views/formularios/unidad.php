@@ -12,8 +12,7 @@
             Registro de información de las unidades académicas.
         </p>
 
-        <form
-            href="<?= site_url('unidad_controll/lista'); ?>
+        <form action="<?= site_url('unidad_controll/lista'); ?>" method="POST">
             <input type="hidden" name="<?= $this->security->get_csrf_token_name(); ?>" value="<?= $this->security->get_csrf_hash(); ?>">"
             method="POST"
         >
