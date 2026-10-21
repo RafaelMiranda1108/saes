@@ -13,8 +13,13 @@
             Registro de la calificación correspondiente al alumno, profesor, materia y grupo.
         </p>
 
+        <?php if (!empty($mensaje)): ?>
+            <div class="alert alert-info" role="status"><?= html_escape($mensaje) ?></div>
+        <?php endif; ?>
+
         <form
-            action="<?= base_url('index.php/registro_calif_controll/guardar'); ?>"
+            action="<?= site_url('Registro_calif/guardar'); ?>
+            <input type="hidden" name="<?= $this->security->get_csrf_token_name(); ?>" value="<?= $this->security->get_csrf_hash(); ?>">"
             method="POST"
         >
 
